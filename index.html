@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock XD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/Xd icon.png">
+</head>
+<body onload="timeNow()">
+    <div id="logo">
+        <img src="./images/clock_logo.png" alt="logo">
+    </div>
+    <div id="header-message-box">
+        <p>The message and Image will change according to the time</p>
+    </div>
+    <div class="set-alarm-box">
+        <div id="wake-up">
+            <img src="./images/wake_up.png" alt="wake_up logo">
+            <span>Set wake up time</span>
+            <select name="Wake-UP" id="wakeup">
+                <option value="05AM">5 AM - 6 AM</option>
+                <option value="06AM">6 AM - 7 AM</option>
+                <option value="07AM">7 AM - 8 AM</option>
+                <option value="08AM">8 AM - 9 AM</option>
+                <option value="09AM">9 AM - 10 AM</option>
+                <option value="10AM">10 AM - 11 AM</option>
+                <option value="11AM">11 AM - 12 AM</option>
+            </select>
+            <hr class="hr-line hr-line-1">
+        </div>
+        <div id="lunch-time">
+            <img src="./images/lunch_time.png" alt="lunchtime logo">
+            <span>Set lunch time</span>
+            <select name="Lunch" id="lunch">
+                <option value="12PM">12 PM - 1 PM</option>
+                <option value="01PM">1 PM - 2 PM</option>
+                <option value="02PM">2 PM - 3 PM</option>
+                <option value="03PM">3 PM - 4 PM</option>
+            </select>
+            <hr class="hr-line hr-line-2">
+        </div>
+        <div id="nap-time">
+            <img src="./images/nap_time.png" alt="nap-time logo">
+            <span>Set nap time</span>
+            <select name="Nap-Time" id="nap">
+                <option value="04PM">4 PM - 5 PM</option>
+                <option value="05PM">5 PM - 6 PM</option>
+                <option value="06PM">6 PM - 7 PM</option>
+                <option value="07PM">7 PM - 8 PM</option>
+            </select>
+            <hr class="hr-line hr-line-3">
+        </div>
+        <div id="sleep-time">
+            <img src="./images/sleep_time.png" alt="sleep-time logo">
+            <span>Set night time</span>
+            <select name="Sleep-Time" id="sleep">
+                <option value="08PM">8 PM - 9 PM</option>
+                <option value="09PM">9 PM - 10 PM</option>
+                <option value="10PM">10 PM - 11 PM</option>
+                <option value="11PM">11 PM - 12 AM</option>
+                <option value="12AM">12 AM - 1 AM</option>
+            </select>
+        </div>
+    </div>
+    <div class="left-side-message"></div>
+    <div id="left-side-message-text"></div>
+    <div id="set-alarm" onmouseenter="alarmEnter()" onmouseleave="alarmLeave()">Set Alarm</div>
+    <div id="confirmed-alarm-time"></div>
+    <div id="confirmed-alarm-time-text">
+        <span>Wake Up Time : </span><br>
+        <span>Lunch Time : </span><br>
+        <span>Nap Time : </span><br>
+        <span>Night Time : </span>
+    </div>
+    <div id="time-will-updated-message">Time will be updated here after clicking on "Set Alarm"</div>
+    <div id="current-time-screen"></div>
+    <div id="time-banner"><span id="time-banner-span"></span>
+        <div id="time-text">TIME</div>
+        <div class="hours-number">00</div>
+        <div class="hours-text">hours</div>
+        <div class="colon-1">:</div>
+        <div class="minutes-number">00</div>
+        <div class="colon-2">:</div>
+        <div class="minutes-text">mins</div>
+        <div class="seconds-number">00</div>
+        <div class="seconds-text">secs</div>
+        <img class='am-pm-background' src="./images/AM_svg.svg" alt="" srcset="">
+        <div id="am-pm"></div>
+    </div>
+    
+    <div id="current-time-screen-2"></div>
+    <div id="current-time-screen-3"></div>
+    <div id="message-screen"><span id="message-screen-span"></span></div>
+    <div id="image-screen">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
